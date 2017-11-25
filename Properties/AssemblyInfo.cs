@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("JM0ney.Framework.Authentication.Identity")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription( "Abstractions of ASP.NET Identity Entity Framework to coincide with JM0ney project architecture." )]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany( "Jason Iverson Consulting" )]
 [assembly: AssemblyProduct("JM0ney.Framework.Authentication.Identity")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]

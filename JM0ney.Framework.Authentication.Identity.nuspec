@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>JM0ney.Framework.Authentication.Identity</id>
+    <version>1.0.3</version>
+    <title>JM0ney.Framework.Authentication.Identity</title>
+    <authors>Jason Iverson</authors>
+    <owners>Jason Iverson Consulting</owners>
+	<projectUrl>https://github.com/JM0ney/JM0ney.Framework.Authentication.Identity</projectUrl>
+    <!--licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>    
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl-->
+    <description>Abstractions of ASP.NET Identity Entity Framework to coincide with JM0ney project architecture.</description>
+    <releaseNotes>Published.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Jason-Iverson,C#,.NET-Framework,ASP.NET-Identity,Entity-Framework</tags>
+	<dependencies>
+		<dependency id="JM0ney.Framework" version="1.0.3" />
+		<dependency id="JM0ney.Framework.Web" version="1.0.3" />		
+		<dependency id="EntityFramework" version="6.2.0" />
+		<dependency id="Microsoft.AspNet.Identity.Core" version="2.2.1" />
+		<dependency id="Microsoft.AspNet.Identity.EntityFramework" version="2.2.1" />
+		<dependency id="Microsoft.AspNet.Identity.Owin" version="2.2.1" />
+		<dependency id="Microsoft.Owin" version="3.1.0" />
+		<dependency id="Microsoft.Owin.Security" version="3.1.0" />
+		<dependency id="Microsoft.Owin.Security.Cookies" version="2.10" />
+		<dependency id="Microsoft.Owin.Security.OAuth" version="3.1.0" />
+		<dependency id="Newtonsoft.Json" version="10.0.3" />
+		<dependency id="Owin" version="1.0" />
+	</dependencies>
+  </metadata>
+</package>
