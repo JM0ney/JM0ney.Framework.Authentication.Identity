@@ -20,10 +20,16 @@ namespace JM0ney.Framework.Authentication.Identity.Managers {
         public static SignInManager Create( IdentityFactoryOptions<SignInManager> options, IOwinContext context ) {
             return new SignInManager( context.GetUserManager<UserManager>( ), context.Authentication );
         }
+
+        public override Task<ClaimsIdentity> CreateUserIdentityAsync( User user ) {
+            return user.GenerateUserIdentityAsync( (Managers.UserManager) this.UserManager );
+           //  return base.CreateUserIdentityAsync( user );
+        }
+
     }
 
 
-    public class SignInManager<TUserManager, TUser, TUserLogin, TUserRole, TUserClaim> : SignInManager<TUser, Guid>
+    public abstract class SignInManager<TUserManager, TUser, TUserLogin, TUserRole, TUserClaim> : SignInManager<TUser, Guid>
         where TUserManager : UserManager<TUser, TUserLogin, TUserRole, TUserClaim>
         where TUser : UserBase<TUser, TUserLogin, TUserRole, TUserClaim> 
         where TUserLogin : IdentityUserLogin<Guid>
@@ -32,12 +38,6 @@ namespace JM0ney.Framework.Authentication.Identity.Managers {
 
         public SignInManager( TUserManager userManager, IAuthenticationManager authenticationManager )
             : base( userManager, authenticationManager ) { }
-
-        public override Task<ClaimsIdentity> CreateUserIdentityAsync( TUser user ) {
-            // Going to need to troubleshoot this
-            TUserManager userManager = ( TUserManager ) this.UserManager;
-            return user.GenerateUserIdentityAsync( userManager );
-        }
     }
 
 }
